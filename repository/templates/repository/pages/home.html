@@ -3,7 +3,14 @@
 <body>
     {% include 'repository/partials/header.html'%}
     {% include 'repository/partials/search.html'%}
-    {% include 'repository/partials/card.html'%}
+    <main class="main-content-container">
+        <div class="main-content main-content-list container">
+            {% include 'repository/partials/card.html'%}            
+        </div>
+    </main>
+
+    {% include 'repository/partials/footer.html'%}
+    
 </body>
 
 </html>
