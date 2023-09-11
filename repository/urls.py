@@ -1,8 +1,9 @@
 from django.urls import path
-from repository.views import home
+from repository import views
 
 
 urlpatterns = [
-    path('', home),
+    path('', views.home),
+    path('sheet/<int:id>/', views.sheet),
 
 ]
