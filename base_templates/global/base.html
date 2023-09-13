@@ -1,0 +1,14 @@
+{% include 'repository/partials/head.html'%}
+
+<body>
+    {% include 'repository/partials/header.html'%}
+    {% include 'repository/partials/search.html'%}
+    <main class="main-content-container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    {% include 'repository/partials/footer.html'%}
+
+</body>
+
+</html>
