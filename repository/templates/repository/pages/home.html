@@ -4,8 +4,8 @@
 
 {% block content %}
 <div class="main-content main-content-list container">
-    {% include 'repository/partials/card.html'%} 
-    {% include 'repository/partials/card.html'%} 
-    {% include 'repository/partials/card.html'%}            
+    {% for sheet in repository  %}
+        {% include 'repository/partials/card.html'%} 
+    {% endfor %}        
 </div>
 {% endblock content %}

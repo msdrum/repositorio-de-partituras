@@ -4,28 +4,29 @@
         <img src="https://via.placeholder.com/1280x720.png/269fe6" alt="Temporário">  
     </div>
     <div class="sheet-title-container">
-        <h2 class="sheet-title">Caminhando</h2>
+        <h2 class="sheet-title">{{ sheet.title }}</h2>
     </div>
 
     <div class="sheet-author">
         <span class="sheet-author-item">
             <i class="fas fa-user"></i>
-            Marcio Silva
+            {{ sheet.first_name }} {{ sheet.last_name }}
         </span>
         <span class="sheet-author-item">
             <i class="fas fa-calendar-alt"></i>
-            06/09/2023 às 01:01
+            {{ sheet.created_at|date:"d/m/Y" }} às {{ sheet.created_at|date:"H:i" }}
         </span>
         <span class="sheet-author-item">
             <a href="">
                 <i class="fas fa-music music-logo-icon"></i>
-                <span>Música Instrumental</span>
+                <span>{{ sheet.category.name }}</span>
             </a>
         </span>
     </div>
     <div class="sheet-content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae voluptate in nisi harum aperiam
-        fugiat, totam et, porro qui doloribus hic facilis a illum asperiores cumque.
+        <p>
+            {{ sheet.description }}
+        </p>
     </div>
 
     {% comment %} <div class="sheet-meta-container">
